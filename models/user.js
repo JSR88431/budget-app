@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Owner = sequelize.define("Owner", {
+  var User = sequelize.define("User", {
     firstName: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -13,44 +13,19 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         len: [1, 50]
       },
-      email: {
+      username: {
         type: DataTypes.STRING,
         allowNul: false
       },
       password: {
         type: DataTypes.STRING,
         allowNul: false
-      },
-      weekleyFunds: {
-        type: DataTypes.INTEGER,
-        allowNull: false
-      },
-      imgUrl: {
-        type: DataType.STRING,
-        allowNul:true
       }
-    },
-    // body: {
-    //   type: DataTypes.TEXT,
-    //   allowNull: false,
-    //   validate: {
-    //     len: [1]
-    //   }
-    // },
-    // category: {
-    //   type: DataTypes.STRING,
-    //   defaultValue: "Personal"
-    // },{
+    }
+  },
+    {
       freezeTableName: true,
       timestamps: false
-    
   });
-  return Owner;
-//   return tableName.create({
-//     Country: 'Afghanistan',
-//     PhoneCode: 93,
-//     Capital: 'Kabul',
-//     IndependenceYear: 1919
-//   });
-// });
+  return User;
 };

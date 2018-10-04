@@ -36,7 +36,7 @@ module.exports = function (app) {
 
     //route for saving a new user
     app.saveNewUser("/api/user", function (req, res) {
-        db.dbUser.create(req.body).then(function (dbUser) {
+        db.User.create(req.body).then(function (dbUser) {
             res.json(dbUser);
         });
     });
