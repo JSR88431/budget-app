@@ -35,8 +35,13 @@ module.exports = function (app) {
     });
 
     //route for saving a new user
+<<<<<<< HEAD
     app.post("/api/user", function (req, res) {
         db.dbUser.create(req.body).then(function (dbUser) {
+=======
+    app.saveNewUser("/api/user", function (req, res) {
+        db.User.create(req.body).then(function (dbUser) {
+>>>>>>> modals
             res.json(dbUser);
         });
     });

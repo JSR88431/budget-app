@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Owner = sequelize.define("Owner", {
+  var User = sequelize.define("User", {
     firstName: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -13,12 +13,13 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         len: [1, 50]
       },
-      email: {
+      username: {
         type: DataTypes.STRING,
         allowNull: false
       },
       password: {
         type: DataTypes.STRING,
+<<<<<<< HEAD
         allowNull: false
       },
       weekleyFunds: {
@@ -44,13 +45,15 @@ module.exports = function(sequelize, DataTypes) {
       // freezeTableName: true,
       // timestamps: false
     
+=======
+        allowNul: false
+      }
+    }
+  },
+    {
+      freezeTableName: true,
+      timestamps: false
+>>>>>>> modals
   });
-  return Owner;
-//   return tableName.create({
-//     Country: 'Afghanistan',
-//     PhoneCode: 93,
-//     Capital: 'Kabul',
-//     IndependenceYear: 1919
-//   });
-// });
+  return User;
 };
