@@ -15,19 +15,19 @@ module.exports = function(sequelize, DataTypes) {
       },
       email: {
         type: DataTypes.STRING,
-        allowNul: false
+        allowNull: false
       },
       password: {
         type: DataTypes.STRING,
-        allowNul: false
+        allowNull: false
       },
       weekleyFunds: {
         type: DataTypes.INTEGER,
         allowNull: false
       },
       imgUrl: {
-        type: DataType.STRING,
-        allowNul:true
+        type: DataTypes.STRING,
+        allowNull:true
       }
     },
     // body: {
@@ -41,8 +41,8 @@ module.exports = function(sequelize, DataTypes) {
     //   type: DataTypes.STRING,
     //   defaultValue: "Personal"
     // },{
-      freezeTableName: true,
-      timestamps: false
+      // freezeTableName: true,
+      // timestamps: false
     
   });
   return Owner;
