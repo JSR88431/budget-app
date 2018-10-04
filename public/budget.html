@@ -21,13 +21,13 @@
             <form>
               <div class="field">
                 <div class="control">
-                  <a class="button is-info is-success is-outlined is-large is-fullwidth">CREATE</a>
+                  <button class="button is-info is-success is-outlined is-large is-fullwidth">CREATE</button>
                 </div>
               </div>
 
               <div class="field">
                 <div class="control">
-                  <a class="button is-info is-info is-outlined is-large is-fullwidth">FIND</a>
+                  <button class="button is-info is-info is-outlined is-large is-fullwidth">FIND</button>
                 </div>
               </div>
             </form>
@@ -38,8 +38,25 @@
         </div>
       </div>
     </div>
+    <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <header class="modal-card-head">
+            <p class="modal-card-title">Please enter the information to create an account</p>
+            <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <input type="text" placeholder="Username" name="userId"><br>
+                <input type="password" placeholder="Password" name="userPassword"><br>
+                <input type="money" placeholder="Amount of money you want to send" name="moneyAmount">
+        </section>
+            <footer class="modal-card-foot">
+            <button class="button is-success">Submit</button>
+            <button class="button">Cancel</button>
+        </footer>
+    </div>
+</div>
   </section>
-  <script async type="text/javascript" src="../js/bulma.js"></script>
 </body>
 
 </html>
