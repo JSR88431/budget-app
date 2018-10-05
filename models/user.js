@@ -19,7 +19,6 @@ module.exports = function(sequelize, DataTypes) {
       },
       password: {
         type: DataTypes.STRING,
-<<<<<<< HEAD
         allowNull: false
       },
       weekleyFunds: {
@@ -45,15 +44,6 @@ module.exports = function(sequelize, DataTypes) {
       // freezeTableName: true,
       // timestamps: false
     
-=======
-        allowNul: false
-      }
-    }
-  },
-    {
-      freezeTableName: true,
-      timestamps: false
->>>>>>> modals
   });
   return User;
 };
