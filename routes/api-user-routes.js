@@ -1,9 +1,8 @@
 // Requiring our models
 var db = require("../models");
 
-// Routes
 module.exports = function (app) {
-
+    
     //route for getting all of the users
     app.get("/api/user", function (req, res) {
         var query = {};
@@ -42,7 +41,7 @@ module.exports = function (app) {
     });
 
     //route for deleting user
-   app.delete("/api/user/:id", function (req, res) {
+    app.delete("/api/user/:id", function (req, res) {
         db.User.destroy({
             where: {
                 id: req.params.id

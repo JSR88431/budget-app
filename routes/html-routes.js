@@ -14,14 +14,8 @@ module.exports = function(app) {
   });
 
   // cms route loads cms.html
-  app.get("/budget", function(req, res) {
+  app.get("/app/budget", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/budget.html"));
   });
-
-  // route loads index.html
-  app.get("/index", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
-  });
-
 
 };

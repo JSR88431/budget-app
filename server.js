@@ -5,7 +5,7 @@ var express = require("express");
 // Sets up the Express App
 // =============================================================
 var app = express();
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 8083;
 
 // Requiring our models for syncing
 var db = require("./models");
@@ -17,8 +17,11 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Routes
+
 require("./routes/html-routes.js")(app);
-require("./routes/api-routes.js")(app);
+require("./routes/api-user-routes")(app);
+require("./routes/expenses-api-routes.js")(app);
+
 
 // syncing sequelize models and starting app
 db.sequelize.sync({ force: true }).then(function() {

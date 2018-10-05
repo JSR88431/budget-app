@@ -15,14 +15,14 @@ module.exports = function(sequelize, DataTypes) {
         },
         description: {
           type: DataTypes.STRING,
-          allowNul: false
+          allowNull: false
         },
       }
     });
     Expenses.associate = function(models){
         Expenses.belongsTo(models.Account, {
             foreignKey: {
-                allowNul: false
+                allowNull: false
             }
         })
     }
