@@ -9,7 +9,7 @@ $(document).ready(function() {
 
   getExpenses();
 
-  function initializeRows() {
+  function initializeRows(expenses) {
     newContainer.empty();
     var rowsToAdd = [];
     for (var i = 0; i < expenses.length; i++) {
@@ -21,7 +21,8 @@ $(document).ready(function() {
   function getExpenses() {
     $.get("/api/expenses", function(data) {
       expenses = data;
-      initializeRows();
+      console.log(expenses);
+      initializeRows(expenses);
     });
   }
 
@@ -37,13 +38,14 @@ $(document).ready(function() {
   function createNewRow(expenses) {
     var $newInputRow = $(
       [
-        "<li class='list-group-item expenses-item'>",
+        "<li class='list-group-item expenses-item' style='width:400px'>",
         "<span>",
-        expenses.text,
+        expenses.amount, 
+        " ",
+        expenses.description,
         "</span>",
         "<input type='text' class='edit' style='display: none;'>",
         "<button class='delete btn btn-danger'>x</button>",
-        "<button class='complete btn btn-primary'>✓</button>",
         "</li>"
       ].join("")
     );
