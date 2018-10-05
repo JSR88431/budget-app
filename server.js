@@ -5,7 +5,7 @@ var express = require("express");
 // Sets up the Express App
 // =============================================================
 var app = express();
-var PORT = process.env.PORT || 8083;
+var PORT = process.env.PORT || 8084;
 
 // Requiring our models for syncing
 var db = require("./models");
@@ -19,7 +19,7 @@ app.use(express.static("public"));
 // Routes
 
 require("./routes/html-routes.js")(app);
-require("./routes/api-user-routes")(app);
+// require("./routes/api-routes.js")(app);
 require("./routes/expenses-api-routes.js")(app);
 
 

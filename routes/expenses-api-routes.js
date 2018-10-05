@@ -2,6 +2,20 @@ var db = require("../models");
 
 module.exports = function(app) {
 
+    app.post("/api/expenses", function(req, res) {
+        console.log(req.body);
+
+        db.expenses.create({
+          amount: req.body.amount,
+          description: req.body.description
+        }).then(function(dbExpenses) {
+
+          res.json(dbExpenses);
+        });
+      });
+  
+
+
   app.get("/api/expenses", function(req, res) {
     db.expenses.findAll({}).then(function(dbExpenses) {
       res.json(dbExpenses);
