@@ -19,33 +19,6 @@ module.exports = function(sequelize, DataTypes) {
       },
       password: {
         type: DataTypes.STRING,
-<<<<<<< HEAD
-        allowNull: false
-      },
-      weekleyFunds: {
-        type: DataTypes.INTEGER,
-        allowNull: false
-      },
-      imgUrl: {
-        type: DataTypes.STRING,
-        allowNull:true
-      }
-    },
-    // body: {
-    //   type: DataTypes.TEXT,
-    //   allowNull: false,
-    //   validate: {
-    //     len: [1]
-    //   }
-    // },
-    // category: {
-    //   type: DataTypes.STRING,
-    //   defaultValue: "Personal"
-    // },{
-      // freezeTableName: true,
-      // timestamps: false
-    
-=======
         allowNul: false
       }
     }
@@ -53,7 +26,6 @@ module.exports = function(sequelize, DataTypes) {
     {
       freezeTableName: true,
       timestamps: false
->>>>>>> modals
   });
   return User;
 };
