@@ -18,4 +18,8 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/budget.html"));
   });
 
+  app.get("/app/welcome", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/index.html"));
+  });
+
 };
