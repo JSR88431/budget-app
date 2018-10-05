@@ -1,52 +1,55 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
-    <script src="main.js"></script>
+    <title>Login - Free Bulma template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
 </head>
+
 <body>
+    <section class="hero is-primary is-fullheight">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <div class="column is-4 is-offset-4">
+                    <h3 class="title has-text-black">Login</h3>
+                    <p class="subtitle has-text-black">Please login to proceed.</p>
+                    <div class="box">
+                        <form>
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input is-large" type="Username" placeholder="Username" autofocus="">
+                                </div>
+                            </div>
 
-<div class="modal" id="create">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head">
-            <p class="modal-card-title">Please enter the information to create an account</p>
-            <button class="delete" aria-label="close"></button>
-            </header>
-            <section class="modal-card-body">
-                <input type="text" placeholder="Username" name="userId"><br>
-                <input type="password" placeholder="Password" name="userPassword"><br>
-                <input type="money" placeholder="Amount of money you want to send" name="moneyAmount">
-        </section>
-            <footer class="modal-card-foot">
-            <button class="button is-success">Submit</button>
-            <button class="button">Cancel</button>
-        </footer>
-    </div>
-</div>
-
-
-<div class="modal" id="login">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head">
-            <p class="modal-card-title">Type in the url given to you to access an account</p>
-            <button class="delete" aria-label="close"></button>
-            </header>
-            <section class="modal-card-body">
-                <input type="username" placeholder="Type URL to go to log page">
-        </section>
-            <footer class="modal-card-foot">
-            <button class="button is-success">Submit</button>
-            <button class="button">Cancel</button>
-            </footer>
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input is-large" type="password" placeholder="Your Password">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                    Remember me
+                                </label>
+                            </div>
+                            <button class="button is-block is-info is-large is-fullwidth">Login</button>
+                        </form>
+                    </div>
+                    <p class="has-text-grey">
+                        <a href="../">Sign Up</a> &nbsp;·&nbsp;
+                        <a href="../">Forgot Password</a> &nbsp;·&nbsp;
+                        <a href="https://www.google.com/">Need Help?</a>
+                    </p>
+                </div>
+            </div>
         </div>
-    </div>
-
+    </section>
+    <script async type="text/javascript" src="../js/bulma.js"></script>
 </body>
+
 </html>
