@@ -24,3 +24,4 @@ $("#cancel").click(function() {
 $(".delete").click(function() {
   $(".modal").removeClass("is-active");  
 });
+
