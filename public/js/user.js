@@ -19,8 +19,7 @@ $("#submitUser").on("click", function (event) {
 
   function redirect(){
     alert("New User Added");
-    var url = "../public/accounts.html"
-    window.location(url);
+    window.location.href = "/expenses";
   }
 
 
