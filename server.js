@@ -19,7 +19,7 @@ app.use(express.static("public"));
 // Routes
 
 require("./routes/html-routes.js")(app);
-// require("./routes/api-routes.js")(app);
+require("./routes/api-routes.js")(app);
 require("./routes/expenses-api-routes.js")(app);
 
 
