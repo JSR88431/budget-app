@@ -1,15 +1,14 @@
-$("#create").click(function(event) {
-  event.preventDefault();
-  $(".modal").addClass("is-active");  
-});
+$(document).ready(function () {
 
-$("#cancel").click(function() {
-  $(".modal").removeClass("is-active");  
-});
 
-$(".delete").click(function() {
-  $(".modal").removeClass("is-active");  
-});
+  $("#create").click(function (event) {
+    event.preventDefault();
+    $(".modal").addClass("is-active");
+  });
+
+  $("#cancel").click(function () {
+    $(".modal").removeClass("is-active");
+  });
 
 
 // $("#find").click(function(event) {
@@ -25,3 +24,12 @@ $(".delete").click(function() {
 //   $(".modal").removeClass("is-active");  
 // });
 
+  $("#cancel").click(function () {
+    $(".modal").removeClass("is-active");
+  });
+
+  $(".delete").click(function () {
+    $(".modal").removeClass("is-active");
+  });
+
+});
