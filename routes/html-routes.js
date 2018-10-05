@@ -15,7 +15,7 @@ module.exports = function(app) {
 
   // cms route loads cms.html
   app.get("/app/budget", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/budget.html"));
+    res.sendFile(path.join(__dirname, "../public/expenses.html"));
   });
 
   app.get("/app/welcome", function(req, res) {
