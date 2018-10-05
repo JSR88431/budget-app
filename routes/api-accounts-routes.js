@@ -34,8 +34,21 @@ module.exports = function (app) {
         });
     });
 
+    //route for retrieving url
+    app.get("/api/acount/:url", function (req, res) {
+        db.Account.findOne({
+            where: {
+                id: req.params.url
+            }
+            //[{include: db.Account}]
+        }).then(function (dbAccount) {
+            console.log(dbAccount);
+            res.json(dbAccount);
+        });
+    });
+
     //route for saving a new account
-    app.saveNewAccount("/api/account", function (req, res) {
+    app.saveNew("/api/account", function (req, res) {
         db.Account.create(req.body).then(function (dbAccount) {
             res.json(dbAccount);
         });
