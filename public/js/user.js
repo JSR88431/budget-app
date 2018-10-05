@@ -4,9 +4,10 @@ $("#submitUser").on("click", function (event) {
     event.preventDefault();
 
     var newUser = {
+      firstName:$(),
+      lastName:$(),
       username: $("#username").val().trim(),
       password: $("#password").val().trim(),
-      money: $("#moneyAmount").val().trim()
     };
 
     $.post("/api/user", newUser)
