@@ -15,17 +15,17 @@ module.exports = function(sequelize, DataTypes) {
         },
         URL: {
           type: DataTypes.STRING,
-          allowNul: false
+          allowNull: false
         },
       }
     });
     Account.associate = function(models){
         Account.belongsTo(models.User, {
             foreignKey: {
-                allowNul: false
+                allowNull: false
             }
         })
     }
-    return Owner;
+    return Account;
   };
   

@@ -21,7 +21,7 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.STRING,
         allowNull: false
       },
-      weekleyFunds: {
+      weeklyFunds: {
         type: DataTypes.INTEGER,
         allowNull: false
       },

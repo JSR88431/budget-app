@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
     var Expenses = sequelize.define("expenses", {
-      accountId: {
+      account_Id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         validate: {
@@ -15,17 +15,17 @@ module.exports = function(sequelize, DataTypes) {
         },
         description: {
           type: DataTypes.STRING,
-          allowNul: false
+          allowNull: false
         },
       }
     });
     Expenses.associate = function(models){
         Expenses.belongsTo(models.Account, {
             foreignKey: {
-                allowNul: false
+                allowNull: false
             }
         })
     }
-    return Owner;
+    return Expenses;
   };
   
