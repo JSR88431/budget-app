@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BUDGET</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <section class="hero is-primary is-fullheight">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <div class="column is-4 is-offset-4">
+          <h2 class="title has-text-black">BUDGET APP</h2>
+          <p class="subtitle has-text-black">Please choose an option below</p>
+          <div class="box">
+            <form>
+              <div class="field">
+                <div class="control">
+                  <button class="button is-info is-success is-outlined is-large is-fullwidth" id="create">CREATE</button>
+                </div>
+              </div>
+
+              <div class="field">
+                <div class="control">
+                  <button class="button is-info is-info is-outlined is-large is-fullwidth" id="find">FIND</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <p class="has-text-grey">
+            <a href="https://www.google.com/">Need Help?</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Please enter the information to create an account</p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <input type="text" placeholder="Username" name="userId"><br>
+        <input type="password" placeholder="Password" name="userPassword"><br>
+        <input type="money" placeholder="Amount of money you want to send" name="moneyAmount">
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success" id="submit">Submit</button>
+        <button class="button" id="cancel">Cancel</button>
+      </footer>
+    </div>
+  </div>
+
+  <div class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Please enter the information to create an account</p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <input type="text" placeholder="Username" name="userId"><br>
+        <input type="password" placeholder="Password" name="userPassword"><br>
+        <input type="money" placeholder="Amount of money you want to send" name="moneyAmount">
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success" id="submit">Submit</button>
+        <button class="button" id="cancel">Cancel</button>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="js/budget.js" type="text/javascript"></script>
+
+</body>
+
+</html>

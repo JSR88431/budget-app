@@ -22,7 +22,7 @@ module.exports = function (app) {
     });
 
     //route for retrieving a single user
-    app.getUser("/api/user/:id", function (req, res) {
+    app.get("/api/user/:id", function (req, res) {
         db.User.findOne({
             where: {
                 id: req.params.id
@@ -35,14 +35,14 @@ module.exports = function (app) {
     });
 
     //route for saving a new user
-    app.saveNewUser("/api/user", function (req, res) {
-        db.dbUser.create(req.body).then(function (dbUser) {
+    app.post("/api/user", function (req, res) {
+        db.User.create(req.body).then(function (dbUser) {
             res.json(dbUser);
         });
     });
 
     //route for deleting user
-    app.deleteUser("/api/user/:id", function (req, res) {
+   app.delete("/api/user/:id", function (req, res) {
         db.User.destroy({
             where: {
                 id: req.params.id
@@ -53,7 +53,7 @@ module.exports = function (app) {
     });
 
     //route for updating user
-    app.updatingUser("/api/user", function (req, res) {
+    app.put("/api/user", function (req, res) {
         db.User.update(
             req.body,
             {

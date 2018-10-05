@@ -1,4 +1,4 @@
--- Drops the budget if it exists currently --
+-- Drops the blogger if it exists currently --
 DROP DATABASE IF EXISTS budget;
--- Creates the budget database --
+-- Creates the "blogger" database --
 CREATE DATABASE budget;
