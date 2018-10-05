@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+.delete {
+    background-color: lightcoral
+}
+>>>>>>> 4bb80afe554db0cf185484a33d904282b79bd16b
 
 .bg-img { 
     background-position: center center;
@@ -6,10 +12,20 @@
     background-size:  cover;
     background-color: #999;
 }
+<<<<<<< HEAD
  .img-responsive {
+=======
+
+
+.img-responsive {
+>>>>>>> 4bb80afe554db0cf185484a33d904282b79bd16b
     display: block;
     max-width: 100%;
     height: 500px;
     margin-left: 20px;
     border-radius: 50px;
+<<<<<<< HEAD
 } 
+=======
+}
+>>>>>>> 4bb80afe554db0cf185484a33d904282b79bd16b
