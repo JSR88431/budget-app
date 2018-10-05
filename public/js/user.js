@@ -4,17 +4,24 @@ $("#submitUser").on("click", function (event) {
     event.preventDefault();
 
     var newUser = {
-      firstName:$(),
-      lastName:$(),
+      firstName:$("#first").val().trim(),
+      lastName:$("#last").val().trim(),
       username: $("#username").val().trim(),
-      password: $("#password").val().trim(),
+      password: $("#password").val().trim()
     };
 
     $.post("/api/user", newUser)
     .then(function(data){
-      console.log("New User Added " + data);
+      console.log(data);
     })
+    redirect();
   });
+
+  function redirect(){
+    alert("New User Added");
+    var url = "../public/accounts.html"
+    window.location(url);
+  }
 
 
 
