@@ -29,12 +29,13 @@ $(document).ready(function () {
   $("#login").on("click", function (event) {
     event.preventDefault();
     var login = {
-      username: $("#username").val(),
-      password: $("#password").val()
+      username: $("#userTwo").val().trim(),
+      password: $("#passTwo").val().trim()
     }
+    console.log(login);
     $.post("/login", login)
       .then(function(data){
-        data.redirect("/expenses");
+        console.log(data);
       })
   });
 

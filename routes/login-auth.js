@@ -1,7 +1,6 @@
 var db = require("../models");
 
 module.exports = function (app) {
-    var user = db.User;
     app.get("/", function (req, res) {
         // check session first
         if (req.session.user) {
@@ -39,6 +38,7 @@ module.exports = function (app) {
         }
         // if no session or cookie, send initial login form
         else {
+            console.log("login redirect");
             res.send(".public/login.html");
         }
     });
@@ -82,6 +82,7 @@ module.exports = function (app) {
                     username: req.body.username,
                     password: req.body.password
                 }
+                res.redirect("/");
             }
             else {
                 console.log("Incorrect");
