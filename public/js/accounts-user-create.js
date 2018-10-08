@@ -7,6 +7,8 @@ $(document).ready(function() {
     // an Author
     $(document).on("submit", "#user-form", handleUserFormSubmit);
     $(document).on("click", ".delete-user", handleDeleteButtonPress);
+    
+
   
     // Getting the initial list of Users
     getUsers();
@@ -37,8 +39,7 @@ $(document).ready(function() {
       var newTr = $("<tr>");
       newTr.data("user", userData);
       newTr.append("<td>" + userData.firstName + "</td>");
-      newTr.append("<td> " + userData.length + "</td>");
-      newTr.append("<td><a href='/expense.html?author_id=" + userData.id + "'>Go to Expenses</a></td>");
+      newTr.append("<td><a href='/expenses.html?author_id=" + userData.id + "'>Go to Expenses</a></td>");
       newTr.append("<td><a href='/cms.html?author_id=" + userData.id + "'>Log New Expense</a></td>");
       newTr.append("<td><a style='cursor:pointer;color:red' class='delete-author'>Delete Account</a></td>");
       return newTr;

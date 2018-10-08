@@ -42,6 +42,7 @@ $(document).ready(function() {
         "<li class='list-group-item expenses-item' style='width:400px''font:20px'>",
         "<span>",
         expenses.amount, 
+        console.log(expenses.amount),
         " ",
         expenses.description,
         "</span>",
