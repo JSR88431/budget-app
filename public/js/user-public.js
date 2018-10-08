@@ -16,13 +16,13 @@ $(document).ready(function () {
       .then(function (data) {
         console.log(data);
       })
-    // redirect();
+    redirect();
   });
 
-  // function redirect(){
-  //   alert("New User Added");
-  //   window.location.href = "/expenses";
-  // }
+  function redirect(){
+    alert("New User Added");
+    window.location.href = "/expenses";
+  }
 
 
 
