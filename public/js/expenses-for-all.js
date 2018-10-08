@@ -4,7 +4,7 @@ $(document).ready(function() {
     var expenseCategorySelect = $("#category");
     // Click events for the edit and delete buttons
     $(document).on("click", "button.delete", handleExpenseDelete);
-    $(document).on("click", "button.edit", handleExpenseEdit);
+    $(document).on("submit", "button.edit", handleExpenseEdit);
     // Variable to hold our accounts
   var expense;
   // The code below handles the case where we want to get blog posts for a specific User

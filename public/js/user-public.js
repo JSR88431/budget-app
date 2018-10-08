@@ -9,6 +9,7 @@ $(document).ready(function () {
         username: $("#username").val().trim(),
         password: $("#password").val().trim(),
       };
+
   
       $.post("/api/user", newUser)
       .then(function(data){
