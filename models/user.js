@@ -22,6 +22,9 @@ module.exports = function(sequelize, DataTypes) {
       },
       cookie: {
         type: DataTypes.STRING
+      },
+      budget: {
+        type: DataTypes.INTEGER
       }
     })
   User.associate = function(models) {
