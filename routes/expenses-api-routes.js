@@ -5,7 +5,7 @@ module.exports = function(app) {
     app.post("/api/expenses", function(req, res) {
         console.log(req.body);
 
-        db.expenses.create({
+        db.Expenses.create({
           amount: req.body.amount,
           description: req.body.description
         }).then(function(dbExpenses) {
@@ -17,13 +17,13 @@ module.exports = function(app) {
 
 
   app.get("/api/expenses", function(req, res) {
-    db.expenses.findAll({}).then(function(dbExpenses) {
+    db.Expenses.findAll({}).then(function(dbExpenses) {
       res.json(dbExpenses);
     });
   });
 
   app.post("/api/expenses", function(req, res) {
-    db.expenses.create({
+    db.Expenses.create({
       amount: req.body.amount,
       description: req.body.description
     }).then(function(dbExpenses) {
@@ -35,7 +35,7 @@ module.exports = function(app) {
   });
 
   app.delete("/api/expenses/:id", function(req, res) {
-    db.expenses.destroy({
+    db.Expenses.destroy({
       where: {
         id: req.params.id
       }

@@ -1,18 +1,24 @@
 module.exports = function(sequelize, DataTypes) {
     var Account = sequelize.define("Account", {
-      ownerId: {
+      accountID: {
         type: DataTypes.INTEGER,
         allowNull: false,
         validate: {
           len: [1, 20]
-        }
-      },
-      budget: {
-        type: DataTypes.INTEGER,
+        },
+      },accountUser: {
+        type: DataTypes.STRING,
         allowNull: false,
         validate: {
-          len: [1, 50]
+          len: [1, 20]
         },
+      },
+        budget: {
+          type: DataTypes.INTEGER,
+          allowNull: false,
+          validate: {
+            len: [1, 50]
+          },
         URL: {
           type: DataTypes.STRING,
           allowNull: false,
@@ -24,9 +30,7 @@ module.exports = function(sequelize, DataTypes) {
     });
     Account.associate = function(models){
         Account.belongsTo(models.User, {
-            foreignKey: {
-                allowNull: false
-            }
+          allowNull: false
         })
     }
     return Account;

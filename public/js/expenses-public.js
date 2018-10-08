@@ -1,7 +1,7 @@
 $(document).ready(function() {
-  var newAmount = $("input.amount");
-  var newDescription = $("input.description");
-  var newContainer = $(".expenses-container");
+  var $newAmountInput = $("input.amount");
+  var $newDescriptionInput = $("input.description");
+  var $newContainer = $(".expenses-container");
   $(document).on("click", "button.delete", deleteExpenses);
   $(document).on("submit", "#expenses-form", insertExpenses);
 
@@ -9,20 +9,20 @@ $(document).ready(function() {
 
   getExpenses();
 
-  function initializeRows(expenses) {
-    newContainer.empty();
+  function initializeRows() {
+    $newContainer.empty();
     var rowsToAdd = [];
     for (var i = 0; i < expenses.length; i++) {
       rowsToAdd.push(createNewRow(expenses[i]));
     }
-    newContainer.prepend(rowsToAdd);
+    $newContainer.prepend(rowsToAdd);
   }
 
   function getExpenses() {
     $.get("/api/expenses", function(data) {
       expenses = data;
       console.log(expenses);
-      initializeRows(expenses);
+      initializeRows();
     });
   }
 
@@ -36,9 +36,10 @@ $(document).ready(function() {
   }
 
   function createNewRow(expenses) {
+    console.log(expenses);
     var $newInputRow = $(
       [
-        "<li class='list-group-item expenses-item' style='width:400px'>",
+        "<li class='list-group-item expenses-item' style='width:400px''font:20px'>",
         "<span>",
         expenses.amount, 
         " ",
@@ -59,13 +60,14 @@ $(document).ready(function() {
   function insertExpenses(event) {
     event.preventDefault();
     var expenses = {
-      amount: newAmount.val().trim(),
-      description: newDescription.val().trim()
+      amount: $newAmountInput.val().trim(),
+      description: $newDescriptionInput.val().trim()
       
     };
 
     $.post("/api/expenses", expenses, getExpenses);
-    newAmount.val("");
-    newDescription.val("");
+    $newAmountInput.val("");
+    $newDescriptionInput.val("");
   }
+  
 });

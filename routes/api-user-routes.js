@@ -9,7 +9,7 @@ module.exports = function (app) {
         if (req.query.user_id) {
             query.UserId = req.query.user_id;
         }
-        db.User.findAllUsers({
+        db.User.findAll({
             // include:[{
             //   model: db.User,
             // }],
