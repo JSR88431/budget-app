@@ -73,4 +73,15 @@
   .top-30 {
     margin-top: 30px;
   }
+
+.hero.is-medium .hero-body {
+    padding-bottom: 9rem;
+    padding-top: 4em;
+}
+
+.navbar-end {
+  justify-content: flex-end;
+  margin-left: auto;
+  margin-right: 10px;
+}
   

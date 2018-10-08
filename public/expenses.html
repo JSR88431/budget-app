@@ -13,9 +13,10 @@
     <!-- Bulma Version 0.7.1-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-		<link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
-		
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+
 </head>
 
 <body>
@@ -41,7 +42,7 @@
                                         <span>Home</span>
                                     </a>
                                     <br>
-                                    <a class="button is-white is-outlined" href="">
+                                    <a class="button is-white is-outlined" href="" style="margin-left: 10px;">
                                         <span class="icon">
                                             <i class="fa fa-sign-out"></i>
                                         </span>
@@ -91,86 +92,86 @@
             </div>
         </div>
     </section>
-		<div class="box cta">
+    <div class="box cta">
         <p class="has-text-centered">
             <span class="tag is-primary">Congrats</span> You've chosen the top budget app in the World
         </p>
     </div>
     <section class="user-container">
         <div class="row mt-4">
-						<div class="col-md-2 col-sm-2">
-							<a class="btn btn-light" href="/blog">Go to Blog</a>
-						</div>
-						<div class="col-md-2 col-sm-2">
-							<a class="btn btn-light" href="/cms">New Post</a>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-8 offset-md-2">
-							<div class="user-container">
-								<h1>Account Users:</h1>
-								<table class="table table-striped">
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th># of Expenses</th>
-											<th>See Account Expenses</th>
-											<th>New Expense</th>
-											<th>Delete Account</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr id="form-row">
-											<form id="user-form">
-												<td colspan="4">
-													<input placeholder="Enter a name" id="user-name" type="text" />
-												</td>
-												<td><button type="submit" class="btn btn-success">Create Account</button>
-												</td>
-											</form>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
-					
-		</section>
-		<section class="container">
-            <div class="column is-8">
-                <div class="card is-shady">
-                    <div class="card-image has-text-centered">
-                        <i class="fa fa-money"></i>
-                    </div>
-                    <!--<div class="card-content">
+            <div class="col-md-2 col-sm-2">
+                <a class="btn btn-light" href="/blog">Go to Blog</a>
+            </div>
+            <div class="col-md-2 col-sm-2">
+                <a class="btn btn-light" href="/cms">New Post</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="user-container">
+                    <h1>Account Users:</h1>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th># of Expenses</th>
+                                <th>See Account Expenses</th>
+                                <th>New Expense</th>
+                                <th>Delete Account</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="form-row">
+                                <form id="user-form">
+                                    <td colspan="4">
+                                        <input placeholder="Enter a name" id="user-name" type="text" />
+                                    </td>
+                                    <td><button type="submit" class="btn btn-success">Create User</button>
+                                    </td>
+                                </form>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="container">
+        <div class="column is-8">
+            <div class="card is-shady">
+                <div class="card-image has-text-centered">
+                    <i class="fa fa-money"></i>
+                </div>
+                <!--<div class="card-content">
                         <div class="content">
 															<div class="row">
 																<div class="col-md-8 expenses-container">
 															</div>-->
-                        </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <div class="column is-4">
+            <div class="card is-shady">
+                <div class="card-image has-text-centered">
+                    <i class="fa fa-money"></i>
+                </div>
+                <div class="card-content">
+                    <div class="content">
+                        <h4>Account 3 </h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam sequi similique
+                            molestias eaque et itaque ut obcaecati, assumenda animi non voluptatibus nam ex
+                            architecto numquam accusamus ducimus quibusdam illo voluptatem!</p>
+                        <p><a href="#">Learn more</a></p>
                     </div>
                 </div>
             </div>
-            <div class="column is-4">
-                <div class="card is-shady">
-                    <div class="card-image has-text-centered">
-                        <i class="fa fa-money"></i>
-                    </div>
-                    <div class="card-content">
-                        <div class="content">
-                            <h4>Account 3 </h4>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam sequi similique
-                                molestias eaque et itaque ut obcaecati, assumenda animi non voluptatibus nam ex
-                                architecto numquam accusamus ducimus quibusdam illo voluptatem!</p>
-                            <p><a href="#">Learn more</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-				</div>
-  </section>
-		<!-- Custom Script -->
-		<script src="/js/accounts-user-create.js" type="text/javascript"></script>
+        </div>
+        </div>
+    </section>
+    <!-- Custom Script -->
+    <script src="/js/accounts-user-create.js" type="text/javascript"></script>
     <script src="/js/expenses-public.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.min.js" type="text/javascript"></script>
 
