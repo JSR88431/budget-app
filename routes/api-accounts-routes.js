@@ -5,12 +5,12 @@ var db = require("../models");
 module.exports = function (app) {
 
     //route for getting all of the accounts
-    app.get("/api/ownerId", function (req, res) {
+    app.get("/api/account", function (req, res) {
         var query = {};
         if (req.query.ownerId) {
             query.OwnerId = req.query.ownerId;
         }
-        db.Accounts.findAll({
+        db.Account.findAll({
             // include:[{
             //   model: db.Account,
             // }],
@@ -22,59 +22,59 @@ module.exports = function (app) {
     });
 
     //route for retrieving a single account
-    app.get("/api/acount/:id", function (req, res) {
+    app.get("/api/account/:id", function (req, res) {
         db.Account.findOne({
             where: {
                 id: req.params.id
             }
             //[{include: db.Account}]
-        }).then(function (dbAccount) {
-            console.log(dbAccount);
-            res.json(dbAccount);
+        }).then(function (dbAccounts) {
+            console.log(dbAccounts);
+            res.json(dbAccounts);
         });
     });
 
     //route for retrieving url
-    app.get("/api/acount/:url", function (req, res) {
+    app.get("/api/account/:url", function (req, res) {
         db.Account.findOne({
             where: {
                 id: req.params.url
             }
-            //[{include: db.Account}]
-        }).then(function (dbAccount) {
-            console.log(dbAccount);
-            res.json(dbAccount);
+            //[{include: db.Accounts}]
+        }).then(function (dbAccounts) {
+            console.log(dbAccounts);
+            res.json(dbAccounts);
         });
     });
 
-    //route for saving a new account
-    app.saveNew("/api/account", function (req, res) {
-        db.Account.create(req.body).then(function (dbAccount) {
-            res.json(dbAccount);
+    //route for saving a new Accounts
+    app.post("/api/account", function (req, res) {
+        db.Accounts.create(req.body).then(function (dbAccounts) {
+            res.json(dbAccounts);
         });
     });
 
-    //route for deleting Account
-   app.delete("/apiAccount/:id", function (req, res) {
-        db.Account.destroy({
+    //route for deleting Accounts
+   app.delete("/api/account/:id", function (req, res) {
+        db.Accounts.destroy({
             where: {
                 id: req.params.id
             }
-        }).then(function (dbAccount) {
-            res.json(dbAccount);
+        }).then(function (dbAccounts) {
+            res.json(dbAccounts);
         });
     });
 
-    //route for updating account
+    //route for updating Accounts
     app.put("/api/account", function (req, res) {
-        db.Account.update(
+        db.Accounts.update(
             req.body,
             {
                 where: {
                     id: req.body.id
                 }
-            }).then(function (dbAccou) {
-                res.json(dbAccou);
+            }).then(function (dbAccounts) {
+                res.json(dbAccounts);
             });
     });
 };
