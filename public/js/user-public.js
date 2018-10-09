@@ -16,6 +16,7 @@ $(document).ready(function () {
       .then(function (data) {
         console.log(data);
       })
+      // getMoney();
     redirect();
   });
 
@@ -24,7 +25,20 @@ $(document).ready(function () {
     window.location.href = "/expenses";
   }
 
+  var moneyLeft = $("#starterMoney");
 
+
+  // function getMoney() {
+  //   $.get("/api/money", function(data) {
+  //     var rowsToAdd = [];
+  //     for (var i = 0; i < data.length; i++) {
+  //       rowsToAdd.push(createMoneyRow(data[i]));
+  //     }
+  //     renderMoneyList(rowsToAdd);
+  //     moneyLeft.val("");
+  //     console.log(moneyLeft);
+  //   });
+  // }
 
   $("#login").on("click", function (event) {
     event.preventDefault();

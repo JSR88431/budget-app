@@ -3,6 +3,7 @@ $(document).ready(function() {
     var userInput = $("#user-name");
     var userList = $("tbody");
     var userContainer = $(".user-container");
+    var moneyLeft = $("#starterMoney");
     // Adding event listeners to the form to create a new object, and the button to delete
     // an Author
     $(document).on("submit", "#user-form", handleUserFormSubmit);
@@ -89,5 +90,7 @@ $(document).ready(function() {
         .then(getUsers);
     }
     
-  });
+
+
+});
   

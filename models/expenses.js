@@ -1,11 +1,11 @@
 module.exports = function(sequelize, DataTypes) {
     var Expenses = sequelize.define("Expenses", {
-      account_Id: {
-        type: DataTypes.INTEGER,
-        validate: {
-          len: [1, 20]
-        }
-      },
+      // user_Id: {
+      //   type: DataTypes.INTEGER,
+      //   validate: {
+      //     len: [1, 20]
+      //   }
+      // },
     amount: {
         type: DataTypes.INTEGER,
         allowNull: false,
