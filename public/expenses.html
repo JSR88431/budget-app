@@ -13,6 +13,7 @@
     <!-- Bulma Version 0.7.1-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
 
 
 		
@@ -62,114 +63,40 @@
                 <h2 class="subtitle">
                     Scroll down to view Accounts
                 </h2>-->
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 offset-md-3">
-                            <ul class="list-group expenses-list">
-                                <form id="expenses-form">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-10">
-                                                <!--show expenses on page-->
-                                                <input class="new-item form-control amount" placeholder="How much money did you spend?"
-                                                    type="text" />
-                                                <input class="new-item form-control description" placeholder="What did you spend it on?"
-                                                    type="text" />
-                                            </div>
-                                            <div class="col-2">
-                                                <button type="submit" class="btn btn-success">Spend!</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                                <span class="expenses-container">
-                                </span>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+<div class="container">
+<div class="row">
+<div class="col-md-6 offset-md-3">
+<ul class="list-group expenses-list">
+<form id="expenses-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-10">
+                <!--show expenses on page-->
+                <input class="new-item form-control amount" placeholder="Amount?"
+                    type="text" />
+                <input class="new-item form-control description" placeholder="What did you spend it on?"
+                    type="text" />
+            </div>
+            <div class="col-2">
+                <button type="submit" class="btn btn-success">Spend!</button>
             </div>
         </div>
+    </div>
+</form>
+<span class="expenses-container">
+</span>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
     </section>
     <div class="box cta">
         <p class="has-text-centered">
             <span class="tag is-primary">Congrats</span> You've chosen the top budget app in the World
         </p>
     </div>
-    <section class="user-container">
-        <div class="row mt-4">
-						<div class="col-md-2 col-sm-2">
-							<a class="btn btn-light" href="/blog">Go to Blog</a>
-						</div>
-						<div class="col-md-2 col-sm-2">
-							<a class="btn btn-light" href="/cms">New Post</a>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-8 offset-md-2">
-							<div class="user-container">
-								<h1>Account Users:</h1>
-								<table class="table table-striped">
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>See Account Expenses</th>
-											<th>New Expense</th>
-											<th>Delete Account</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr id="form-row">
-											<form id="user-form">
-												<td colspan="4">
-													<input placeholder="Enter a name" id="user-name" type="text" />
-												</td>
-												<td><button type="submit" class="btn btn-success">Create Account</button>
-												</td>
-											</form>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
-					
-		</section>
-		<section class="container">
-            <div class="column is-8">
-                <div class="card is-shady">
-                    <div class="card-image has-text-centered">
-                        <i class="fa fa-money"></i>
-                    </div>
-                    <!--<div class="card-content">
-                        <div class="content">
-															<div class="row">
-																<div class="col-md-8 expenses-container">
-															</div>-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="column is-4">
-                <div class="card is-shady">
-                    <div class="card-image has-text-centered">
-                        <i class="fa fa-money"></i>
-                    </div>
-                    <div class="card-content">
-                        <div class="content">
-                            <h4>Account 3 </h4>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam sequi similique
-                                molestias eaque et itaque ut obcaecati, assumenda animi non voluptatibus nam ex
-                                architecto numquam accusamus ducimus quibusdam illo voluptatem!</p>
-                            <p><a href="#">Learn more</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
     <!-- Custom Script -->
     <script src="/js/accounts-user-create.js" type="text/javascript"></script>
     <script src="/js/expenses-public.js" type="text/javascript"></script>
