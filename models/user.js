@@ -20,9 +20,6 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
-    cookie: {
-      type: DataTypes.STRING
-    },
     budget: {
       type: DataTypes.INTEGER
     }
