@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   var $newAmountInput = $("input.amount");
   var $newDescriptionInput = $("input.description");
   var $newContainer = $(".expenses-container");
@@ -19,7 +19,7 @@ $(document).ready(function() {
   }
 
   function getExpenses() {
-    $.get("/api/expenses", function(data) {
+    $.get("/api/expenses", function (data) {
       expenses = data;
       console.log(expenses);
       initializeRows();
@@ -41,13 +41,13 @@ $(document).ready(function() {
       [
         "<li class='list-group-item expenses-item' style='width:400px''font:20px'>",
         "<span>",
-        expenses.amount, 
+        expenses.amount,
         console.log(expenses.amount),
         " ",
         expenses.description,
         "</span>",
         "<input type='text' class='edit' style='display: none;'>",
-        "<button class='delete btn btn-danger'>x</button>",
+        "<button class='delete'>Delete</button>",
         "</li>"
       ].join("")
     );
@@ -63,12 +63,12 @@ $(document).ready(function() {
     var expenses = {
       amount: $newAmountInput.val().trim(),
       description: $newDescriptionInput.val().trim()
-      
+
     };
 
     $.post("/api/expenses", expenses, getExpenses);
     $newAmountInput.val("");
     $newDescriptionInput.val("");
   }
-  
+
 });
